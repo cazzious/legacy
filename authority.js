@@ -81,7 +81,7 @@ func:function()
 		effects:[
 			{type:'gather',what:{'happiness':0.2},mode:'hand-to-hand'},
 			{type:'gather',what:{'happiness':0.5},mode:'weapon comabt'},
-			{type:'function',func:unitGetsConverted({'wounded':1},0.001,0.03,'[X] [people] wounded in honourable combat.','warrior was','warriors were'),chance:1/3,mode:'weapon combat,
+			{type:'function',func:unitGetsConverted({'wounded':1},0.001,0.03,'[X] [people] wounded in honourable combat.','warrior was','warriors were'),chance:1/3,mode:'weapon combat'},
 		],
 		req:{'tribalism':true},
 		category:'cultural',
