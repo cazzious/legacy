@@ -69,13 +69,14 @@ func:function()
 			'hand-to-hand':{
 				name:'Hand-to-hand Combat',
 				icon:[0,0],
-				desc:'Barehanded fights between combatants.'
+				desc:'Barehanded fights between combatants.',
 			},
 			'weapon combat':{
 				name:'Weapon Combat',
 				icon:[0,0],
 				desc:'Armed conflict between combatants.//More dangerous, but more entertaining.',
-				use:{'stone weapons':2}
+				use:{'stone weapons':2},
+				req:{'spears':true},
 			},
 		},
 		effects:[
