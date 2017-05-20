@@ -63,11 +63,25 @@ func:function()
 		icon:[0,0],
 		cost:{'basic building materials':500},
 		use:{'worker':2,'stone weapons':2},
-		//upkeep:{'coin':0.2},
+		upkeep:{'coin':0.2},
 		gizmos:true,
+		modes:{
+			'hand-to-hand':{
+				name:'Hand-to-hand Combat',
+				icon:[0,0],
+				desc:'Barehanded fights between combatants.'
+			},
+			'weapon combat':{
+				name:'Weapon Combat',
+				icon:[0,0],
+				desc:'Armed conflict between combatants.//More dangerous, but more entertaining.',
+				use:{'stone weapons':2}
+			},
+		},
 		effects:[
-			{type:'gather',what:{'happiness':0.5}},
-			{type:'function',func:unitGetsConverted({'wounded':1},0.001,0.03,'[X] [people] wounded in honourable combat.','warrior was','warriors were'),chance:1/3}
+			{type:'gather',what:{'happiness':0.2},mode:'hand-to-hand'},
+			{type:'gather',what:{'happiness':0.5},mode:'weapon comabt'},
+			{type:'function',func:unitGetsConverted({'wounded':1},0.001,0.03,'[X] [people] wounded in honourable combat.','warrior was','warriors were'),chance:1/3,mode:'weapon combat,
 		],
 		req:{'tribalism':true},
 		category:'cultural',
