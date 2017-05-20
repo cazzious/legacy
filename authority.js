@@ -74,7 +74,7 @@ func:function()
 			},
 			'weapon combat':{
 				name:'Weapon Combat',
-				icon:[1,9],
+				icon:[5,9],
 				desc:'Armed conflict between combatants.//More dangerous, but more entertaining.',
 				use:{'worker':2,'stone weapons':2},
 				req:{'spears':true},
